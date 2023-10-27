@@ -20,7 +20,7 @@ export function StoreItem({ id, name, description, imgUrl, price, category  }: S
     removeFromCart,
   } = useShoppingCart()
   const quantity = getItemQuantity(id as number);
-  const [searchTerm, setSearchTerm] = useState("");
+ 
   return (
     <>
     
@@ -50,7 +50,7 @@ export function StoreItem({ id, name, description, imgUrl, price, category  }: S
             </div>
             <div className="mt-auto">
               {quantity === 0 ? (
-                <Button className="w-100" onClick={() => increaseCartQuantity(id as number)}>
+                <Button variant="success" className="w-100" onClick={() => increaseCartQuantity(id as number)}>
                   + Add To Cart
                 </Button>
               ) : (
@@ -62,7 +62,7 @@ export function StoreItem({ id, name, description, imgUrl, price, category  }: S
                     className="d-flex align-items-center justify-content-center"
                     style={{ gap: ".5rem" }}
                   >
-                    <Button onClick={() => decreaseCartQuantity(id as number)}>-</Button>
+                    <Button  onClick={() => decreaseCartQuantity(id as number)}>-</Button>
                     <div>
                       <span className="fs-3">{quantity}</span> in cart
                     </div>
