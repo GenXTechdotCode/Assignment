@@ -23,7 +23,6 @@ export function Store() {
         <Dropdown.Toggle variant="success" id="dropdown-basic">
           All
         </Dropdown.Toggle>
-
         <Dropdown.Menu>
           <Dropdown.Item onClick={() => setCategoryFilter("automotive")}>
             Automotive
